@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Professional CV</title>
+  <meta name="description" content="Professional CV of Fahad Almalki, Senior Web Developer with over 14 years of experience. Expertise in HTML, CSS, JavaScript, ASP.NET Core, and more." />
+  <meta name="keywords" content="Fahad Almalki, Web Developer, ASP.NET Core, HTML, CSS, JavaScript, Senior Developer" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Headland+One&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playwrite+NG+Modern:wght@100..400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="logo">FHD</div>
+    <nav>
+      <ul>
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="path-to-your-cv.pdf" download class="download-icon" aria-label="Download CV"><i class="fa-solid fa-download"></i></a></li>
+        <li><button id="toggle-dark-mode" aria-label="Toggle Dark Mode"><i class="fa-solid fa-moon"></i></button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="section visible">
+    <div class="hero-content common-container">
+      <h1>Fahad Almalki</h1>
+      <div id="typed-text"></div>
+      <div class="contact-icons">
+        <a href="mailto:youremail@example.com" aria-label="Email Fahad Almalki"><i class="fa-solid fa-envelope"></i></a>
+        <a href="tel:+966500520864" aria-label="Call Fahad Almalki"><i class="fa-solid fa-phone"></i></a>
+        <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn Profile"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section hidden">
+    <div class="common-container about-content">
+      <img src="images/profile.jpg" alt="Profile photo of Fahad Almalki" class="profile-photo" />
+      <h2>About Me</h2>
+      <p>
+        Hi, I'm Fahad Almalki, a Senior Web Developer with over 14 years of experience in creating dynamic and responsive web applications. I have a passion for coding and enjoy working on both frontend and backend development. My expertise spans a wide range of technologies, including HTML, CSS, JavaScript, and ASP.NET Core.
+      </p>
+      <p>
+        Throughout my career, I have had the opportunity to work on a diverse array of projects, ranging from small websites to large-scale applications. I take pride in my ability to understand client requirements and translate them into functional and aesthetically pleasing web solutions.
+      </p>
+      <p>
+        When I'm not coding, I enjoy exploring new technologies and reading tech blogs. I am always looking for new challenges and opportunities to grow as a developer.
+      </p>
+      <p>Key achievements:</p>
+      <ul>
+        <li>Led a team in developing a comprehensive portal for managing external missions efficiently.</li>
+        <li>Engineered and optimized complex workflows, ensuring delivery to the highest standards.</li>
+        <li>Conducted in-depth analysis and design of systems from scratch, followed by implementation, continuous monitoring, and iterative adjustments to meet evolving requirements and achieve optimal performance.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="experience" class="section hidden">
+    <div class="common-container">
+      <h2>Experience</h2>
+      <div class="experience-item">
+        <h3>Senior Web Developer</h3>
+        <h4>Confidential Government</h4>
+        <span>September 2021 - Present</span>
+        <ul>
+          <li>Led the development of secure and scalable web applications for various government services.</li>
+          <li>Collaborated with cross-functional teams to define, design, and ship new features.</li>
+          <li>Implemented best practices for code quality, testing, and performance optimization.</li>
+          <li>Mentored junior developers and conducted code reviews to ensure high-quality code.</li>
+          <li>Utilized technologies such as ASP.NET Core, Angular, and SQL Server.</li>
+        </ul>
+      </div>
+      <div class="experience-item">
+        <h3>Web Developer</h3>
+        <h4>Confidential Government</h4>
+        <span>March 2010 - September 2021</span>
+        <ul>
+          <li>Developed and maintained web applications for government departments.</li>
+          <li>Worked closely with stakeholders to gather requirements and deliver solutions that met their needs.</li>
+          <li>Enhanced existing applications to improve performance, security, and user experience.</li>
+          <li>Participated in the full software development lifecycle, from planning and design to deployment and maintenance.</li>
+          <li>Gained expertise in HTML, CSS, JavaScript, and ASP.NET.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="education" class="section hidden">
+    <div class="common-container">
+      <h2>Education</h2>
+      <div class="education-item">
+        <h3>Diploma in Computer Science</h3>
+        <h4>Institute of Public Administration, Jeddah</h4>
+        <span>2006 - 2009</span>
+        <p>Relevant Coursework or Honors:</p>
+        <ul>
+          <li>C#</li>
+          <li>ASP.NET Webforms</li>
+          <li>ASP.NET MVC</li>
+          <li>ASP.NET Core</li>
+          <li>SQL Server</li>
+          <li>PLSQL</li>
+          <li>ASP.NET Core Clean Architecture and Microservices</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="section hidden">
+    <div class="common-container">
+      <h2>Skills</h2>
+      <div class="skills-list">
+        <h3>Technical Skills</h3>
+        <ul>
+          <li><i class="fa-brands fa-csharp"></i> C#</li>
+          <li><i class="fa-solid fa-code"></i> ASP.NET Webforms</li>
+          <li><i class="fa-solid fa-code"></i> ASP.NET MVC</li>
+          <li><i class="fa-solid fa-code"></i> ASP.NET Core</li>
+          <li><i class="fa-solid fa-database"></i> SQL Server</li>
+          <li><i class="fa-solid fa-database"></i> PLSQL</li>
+          <li><i class="fa-solid fa-layer-group"></i> ASP.NET Core Clean Architecture</li>
+          <li><i class="fa-solid fa-cubes"></i> ASP.NET Core Microservices</li>
+        </ul>
+        <h3>Soft Skills</h3>
+        <ul>
+          <li><i class="fa-solid fa-brain"></i> Problem Solving</li>
+          <li><i class="fa-solid fa-users"></i> Team Leadership</li>
+          <li><i class="fa-solid fa-comments"></i> Communication</li>
+          <li><i class="fa-solid fa-clock"></i> Time Management</li>
+          <li><i class="fa-solid fa-sync"></i> Adaptability</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section hidden">
+    <div class="common-container">
+      <h2>Projects</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <div class="project-front">
+            <img src="images/hajj-system.jpg" alt="Hajj System" class="project-image" />
+            <h3>Hajj System</h3>
+          </div>
+          <div class="project-back">
+            <h3>Hajj System</h3>
+            <p>
+              This system serves employees by allowing them to request participation in the Hajj pilgrimage. After registration ends, an algorithm filters the requests based on specific conditions to allocate seats.
+            </p>
+            <p><strong>Technologies Used:</strong> ASP.NET Core, Entity Framework, SQL Server</p>
+            <p><strong>Architecture:</strong> Clean Architecture</p>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-front">
+            <img src="images/conference-system.jpg" alt="Conference System" class="project-image" />
+            <h3>Conference System</h3>
+          </div>
+          <div class="project-back">
+            <h3>Conference System</h3>
+            <p>
+              This system assists guests arriving in the Kingdom of Saudi Arabia by managing their reception at the airport, facilitating entry procedures, arranging housing, providing transportation, and issuing identification cards.
+            </p>
+            <p><strong>Technologies Used:</strong> ASP.NET Webforms, Oracle</p>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-front">
+            <img src="images/external-missions-management.jpg" alt="External Missions Management" class="project-image" />
+            <h3>External Missions Management</h3>
+          </div>
+          <div class="project-back">
+            <h3>External Missions Management</h3>
+            <p>
+              This system serves individuals participating in missions by providing necessary facilities from departure from Saudi Arabia to arrival in the mission country. The program tracks their special requests, housing, and transportation arrangements.
+            </p>
+            <p><strong>Technologies Used:</strong> ASP.NET Webforms, Oracle</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

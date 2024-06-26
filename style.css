@@ -1,0 +1,556 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Playwrite NG Modern', sans-serif;
+    line-height: 1.6;
+    background: rgba(255, 255, 255, 0.9); /* Glassy White with slight opacity */
+    color: #4A4A4A; /* Dark Gray for text color */
+    padding: 0 20px;
+  }
+  
+  body.dark-mode {
+    background: rgba(58, 58, 58, 0.9); /* Glassy Dark Gray with slight opacity */
+    color: #F2F2F2; /* Light Gray for text color */
+  }
+  
+  /* Header styling */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #BDC3C7; /* Light Gray for border */
+    position: sticky;
+    top: 0;
+    background: #2C3E50; /* Dark Blue background */
+    color: #FFFFFF; /* White text */
+    z-index: 1000;
+  }
+  
+  header.dark-mode {
+    background: #34495E; /* Darker Gray background */
+    color: #F2F2F2; /* Light Gray text */
+  }
+  
+  .logo {
+    font-family: 'Headland One', serif;
+    font-size: 36px;
+    font-weight: bold;
+    color: #FFFFFF; /* White for logo */
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  nav ul li {
+    margin-left: 20px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #FFFFFF; /* White for nav links */
+    font-weight: bold;
+  }
+  
+  nav ul li a:hover {
+    color: #42A5F5; /* Medium Blue for hover effect */
+  }
+  
+  .download-icon i {
+    font-size: 24px;
+  }
+  
+  #toggle-dark-mode {
+    background: none;
+    border: none;
+    color: #FFFFFF; /* White for dark mode icon */
+    cursor: pointer;
+    font-size: 24px;
+    margin-left: 20px;
+  }
+  
+  #toggle-dark-mode:hover {
+    color: #42A5F5; /* Medium Blue for hover effect */
+  }
+  
+  .cta {
+    background: #64B5F6; /* Soft Blue for button */
+    color: #FFFFFF; /* White text */
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: transform 0.3s, background 0.3s;
+  }
+  
+  .cta:hover {
+    background: #42A5F5; /* Medium Blue for hover effect */
+    transform: scale(1.1);
+  }
+  
+  /* Section styling */
+  section {
+    display: none;
+    padding: 40px 0;
+    background: rgba(255, 255, 255, 0.9); /* Glassy White with slight opacity */
+  }
+  
+  section.visible {
+    display: block;
+  }
+  
+  section.dark-mode {
+    background: rgba(58, 58, 58, 0.9); /* Glassy Dark Gray with slight opacity */
+  }
+  
+  /* Common container styling for all sections */
+  .common-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9); /* Glassy White with slight opacity */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    color: #4A4A4A; /* Dark Gray */
+  }
+  
+  .common-container.dark-mode {
+    background: rgba(58, 58, 58, 0.9); /* Glassy Dark Gray with slight opacity */
+    color: #F2F2F2; /* Light Gray */
+  }
+  
+  /* Hero section styling */
+  .hero-content {
+    text-align: center;
+    padding: 60px 0;
+    position: relative;
+  }
+  
+  .hero-content h1 {
+    font-family: 'Headland One', serif;
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #B39DDB; /* Soft Purple for headers */
+    animation: fadeInDown 1s ease-in-out;
+  }
+  
+  .hero-content h1.dark-mode {
+    color: #F48FB1; /* Soft Pink for headers in dark mode */
+  }
+  
+  #typed-text {
+    font-size: 24px;
+    color: #F8BBD0; /* Soft Pink for typed text */
+    margin-top: 20px;
+  }
+  
+  #typed-text.dark-mode {
+    color: #FFAB91; /* Soft Coral for typed text in dark mode */
+  }
+  
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* About section styling */
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .about-content img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+  }
+  
+  .about-content h2 {
+    font-family: 'Headland One', serif;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #B39DDB; /* Soft Purple for headers */
+  }
+  
+  .about-content h2.dark-mode {
+    color: #F48FB1; /* Soft Pink for headers in dark mode */
+  }
+  
+  .about-content p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+  
+  .about-content ul,
+  .common-container ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  .about-content ul li,
+  .experience-item ul li,
+  .education-item ul li,
+  .skills-list ul li {
+    background: rgba(255, 255, 255, 0.1);
+    margin-bottom: 10px;
+    padding: 15px 20px;
+    border-left: 3px solid #F8BBD0; /* Soft Pink for list items */
+    border-radius: 5px;
+    color: #4A4A4A; /* Dark Gray */
+    transition: background 0.3s, font-weight 0.3s;
+  }
+  
+  .about-content ul li:hover,
+  .experience-item ul li:hover,
+  .education-item ul li:hover,
+  .skills-list ul li:hover {
+    background: rgba(255, 171, 145, 0.3); /* Soft Coral for hover effect */
+    font-weight: bold;
+  }
+  
+  .about-content ul li.dark-mode,
+  .experience-item ul li.dark-mode,
+  .education-item ul li.dark-mode,
+  .skills-list ul li.dark-mode {
+    border-left: 3px solid #FFAB91; /* Soft Coral for list items in dark mode */
+  }
+  
+  .about-content ul li.dark-mode:hover,
+  .experience-item ul li.dark-mode:hover,
+  .education-item ul li.dark-mode:hover,
+  .skills-list ul li.dark-mode:hover {
+    background: rgba(255, 112, 67, 0.3); /* Dark Coral for hover effect in dark mode */
+  }
+  
+  /* Contact icons styling */
+  .contact-icons {
+    margin-top: 20px;
+  }
+  
+  .contact-icons a {
+    margin-right: 10px;
+    display: inline-block;
+    color: #F8BBD0; /* Soft Pink for contact icons */
+    font-size: 24px;
+  }
+  
+  .contact-icons a.dark-mode {
+    color: #FFAB91; /* Soft Coral for contact icons in dark mode */
+  }
+  
+  /* Experience section styling */
+  .experience-item {
+    margin-bottom: 30px;
+  }
+  
+  .experience-item h3 {
+    font-family: 'Headland One', serif;
+    font-size: 24px;
+    margin-bottom: 5px;
+    color: #B39DDB; /* Soft Purple for headers */
+  }
+  
+  .experience-item h3.dark-mode {
+    color: #F48FB1; /* Soft Pink for headers in dark mode */
+  }
+  
+  .experience-item h4 {
+    font-family: 'Playwrite NG Modern', sans-serif;
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #4A4A4A; /* Dark Gray */
+  }
+  
+  .experience-item h4.dark-mode {
+    color: #F2F2F2; /* Light Gray in dark mode */
+  }
+  
+  .experience-item span {
+    font-family: 'Playwrite NG Modern', sans-serif;
+    font-size: 16px;
+    color: #BDC3C7; /* Light Gray */
+    display: block;
+    margin-bottom: 15px;
+  }
+  
+  .experience-item span.dark-mode {
+    color: #95A5A6; /* Dark Gray in dark mode */
+  }
+  
+  /* Education section styling */
+  .education-item {
+    margin-bottom: 30px;
+  }
+  
+  .education-item h3 {
+    font-family: 'Headland One', serif;
+    font-size: 24px;
+    margin-bottom: 5px;
+    color: #B39DDB; /* Soft Purple for headers */
+  }
+  
+  .education-item h3.dark-mode {
+    color: #F48FB1; /* Soft Pink for headers in dark mode */
+  }
+  
+  .education-item h4 {
+    font-family: 'Playwrite NG Modern', sans-serif;
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #4A4A4A; /* Dark Gray */
+  }
+  
+  .education-item h4.dark-mode {
+    color: #F2F2F2; /* Light Gray in dark mode */
+  }
+  
+  .education-item span {
+    font-family: 'Playwrite NG Modern', sans-serif;
+    font-size: 16px;
+    color: #BDC3C7; /* Light Gray */
+    display: block;
+    margin-bottom: 15px;
+  }
+  
+  .education-item span.dark-mode {
+    color: #95A5A6; /* Dark Gray in dark mode */
+  }
+  
+  .education-item p {
+    font-family: 'Playwrite NG Modern', sans-serif;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #4A4A4A; /* Dark Gray */
+  }
+  
+  .education-item p.dark-mode {
+    color: #F2F2F2; /* Light Gray in dark mode */
+  }
+  
+  /* Skills section styling */
+  .skills-list {
+    margin-bottom: 30px;
+  }
+  
+  .skills-list h3 {
+    font-family: 'Headland One', serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #B39DDB; /* Soft Purple for headers */
+  }
+  
+  .skills-list h3.dark-mode {
+    color: #F48FB1; /* Soft Pink for headers in dark mode */
+  }
+  
+  .skills-list ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .skills-list ul li i {
+    margin-right: 10px;
+    color: #F8BBD0; /* Soft Pink for skill icons */
+  }
+  
+  .skills-list ul li i.dark-mode {
+    color: #FFAB91; /* Soft Coral for skill icons in dark mode */
+  }
+  
+  /* Projects section styling */
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    overflow: hidden;
+  }
+  
+  .project-card {
+    perspective: 1000px;
+    position: relative;
+    width: 100%;
+    height: 400px;
+    cursor: pointer;
+  }
+  
+  .project-card div {
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .project-front {
+    background: #fff;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    transform: rotateY(0deg);
+  }
+  
+  .project-back {
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    transform: rotateY(180deg);
+  }
+  
+  .project-card:hover .project-front {
+    transform: rotateY(-180deg);
+  }
+  
+  .project-card:hover .project-back {
+    transform: rotateY(0deg);
+  }
+  
+  .project-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px 10px 0 0;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+  }
+  
+  .project-image.loaded {
+    opacity: 1;
+  }
+  
+  .project-front h3,
+  .project-back h3 {
+    text-align: center;
+    margin: 15px 0;
+  }
+  
+  .project-back p {
+    font-size: 14px;
+    margin: 10px 0;
+  }
+  
+  .project-back strong {
+    display: block;
+    margin-top: 10px;
+  }
+  
+  /* Link styling */
+  a {
+    color: #F8BBD0; /* Soft Pink for links */
+  }
+  
+  a.dark-mode {
+    color: #FFAB91; /* Soft Coral for links in dark mode */
+  }
+  
+  a:hover {
+    color: #42A5F5; /* Medium Blue for hover links */
+  }
+  
+  a.dark-mode:hover {
+    color: #FF7043; /* Dark Coral for hover links in dark mode */
+  }
+  
+  /* Input fields styling */
+  input, textarea {
+    background: #FFFFFF; /* White for input background */
+    border: 1px solid #BDC3C7; /* Light Gray for input border */
+    color: #4A4A4A; /* Dark Gray for input text */
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  input.dark-mode, textarea.dark-mode {
+    background: #2C3E50; /* Dark Gray for input background in dark mode */
+    border: 1px solid #F2F2F2; /* Light Gray for input border in dark mode */
+    color: #FFFFFF; /* White for input text in dark mode */
+  }
+  
+  /* Responsive styling */
+  @media (max-width: 768px) {
+    body {
+      padding: 0 10px;
+    }
+  
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    nav ul li {
+      margin-left: 0;
+      margin-bottom: 10px;
+    }
+  
+    .cta {
+      margin-top: 10px;
+    }
+  
+    .common-container {
+      padding: 15px;
+    }
+  
+    .hero-content h1 {
+      font-size: 28px;
+    }
+  
+    .profile-photo {
+      width: 120px;
+      height: 120px;
+    }
+  
+    .project-card {
+      height: 300px;
+    }
+  
+    .project-back p {
+      font-size: 12px;
+    }
+  
+    .project-back strong {
+      font-size: 12px;
+    }
+  }
+  
